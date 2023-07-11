@@ -1,0 +1,926 @@
+ul, li {
+	padding: 0;
+	margin: 0;
+}
+
+
+body {
+	font-family: Bahnschrift;
+	background-image: url("../images/background_cars.jpg");
+	background-size: 100%;
+	background-attachment: fixed;
+}
+
+.page {
+	margin: 0 15%;
+}
+
+.wrapper {
+	display:flex;
+	flex-direction:column;
+}
+
+.wrapper a .a {
+	width: 100%;
+}
+
+.header {
+	color: black;
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.Catalog {
+	color: black;
+	text-decoration: none;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+.open {
+	background-color: #cbd4c2;
+	border-radius: 5% 5% 0 0;
+	box-shadow: 0 3px 5px rgb(0 0 0 / 20%);
+}
+
+.open span::after {
+	background-image: url("../images/check_mark_red_re.png");
+	/* background-repeat: no-repeat; */
+	content: "";
+	position: absolute;
+	left: 380px;
+	top: 35px;
+	width: 14px;
+	height: 14px;
+}
+
+.Brands-content {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+.Brand-items {
+	display: flex;
+	/* flex-wrap: wrap; */
+	width: 20%;
+	align-items: center;
+	padding: 10px;
+}
+
+.Brand-items label {
+	margin-left: 10px;
+}
+
+.CatalogOpen {
+	display: block;
+	position: fixed;
+	height: 210px;
+	width: 600px;
+	top: 92px;
+	left: 619px;
+	background-color: #cbd4c2;
+	box-shadow: 0 3px 5px rgb(0 0 0 / 20%);
+	border-radius: 0 0 2% 2%;
+	transition: top .5s  cubic-bezier(0, 0.82, 1, 1);
+}
+
+.hidden {
+	display: none;
+}
+
+.Catalog:hover {
+	color:rgb(255, 255, 255);
+}
+
+.active {
+	color:rgb(255, 255, 255);
+}
+
+a img {
+	margin-right: 2%;
+}
+
+.rub {
+	display:flex;
+	color: gray;
+	text-decoration: none;
+	font-size: 12px;
+	align-items:center;
+	justify-content:center;
+}
+
+.first {
+	margin-left: 5%;
+	font-size: 22px;
+	color: black;
+	cursor:pointer;
+}
+
+.wrapper:hover > .header{
+	color: rgb(235, 102, 195);
+}
+
+.car {
+	cursor:pointer;
+	float:left;
+}
+
+.main_header {	
+	display:flex;
+	position: fixed;
+	top: 0;
+	width: 69.4%;
+	z-index: 120;
+}
+
+.logo {
+	width: 18%;
+	background-color: white;
+	display:flex;
+}
+
+nav {
+	width: 100%;
+	background-color: #96bb40;
+}
+
+nav ul {
+	height: 100%;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+nav ul li {
+	display: flex;
+	align-items: center;
+	margin: 0;
+}
+
+.actualy:after {
+	content: "";
+	position: absolute;
+	width: 14px;
+	height: 14px;
+	background-repeat: no-repeat;
+	background-image: url("../images/check_mark.png");
+	top: 37px;
+	left: 380px;
+}
+
+.text {
+	flex-wrap:wrap;
+	font-size: 1.1em;
+	font-weight: bold;
+	text-align:center;
+	margin-top: 3%;
+}
+
+section {
+	background-color: white;
+}
+
+.banner {
+	margin-top: 120px;
+}
+
+.SalesHits {
+	font-size: 30px;
+	text-align:center;
+	border-bottom:1px solid gray;
+	color: #ff4a3d;
+	font-family: impact;
+}
+
+.content {
+	justify-content:space-evenly;
+	display: flex;
+	flex-wrap:wrap;
+	margin-bottom: 15px;
+}
+
+.SalesHitsItems {
+	cursor:pointer;
+	width: 23%;
+	margin-bottom: 18px;
+	text-align:center;
+	border-radius: 1%;
+	box-shadow: 0 0 2px;
+	border: 1px solid gray;
+}
+
+.SalesHitsItems:hover {
+	border: 2px solid rgb(13, 207, 241);
+}
+
+.containerBanner {
+	background-color: #e8edf1;
+	position: relative;
+}
+
+.part2 {
+	width: 100%;
+}
+
+.info {
+	position: absolute;
+	left: 300px;
+	top: 200px;
+}
+
+.title {
+	font-size: 34px;
+}
+
+.subtitle {
+	font-size: 18px;
+}
+
+.form {
+	background-color: #dde3e7;
+	padding: 25px;
+	left: 65%;
+	right: 5%;
+	position: absolute;
+	width: 25%;
+	border-radius: 5px;
+	border: 1px solid #6c6f72;
+}
+
+input {
+	border: 1px solid gray;
+	outline: 0;
+	margin-bottom: 20px;
+	font-size: 14px;
+	line-height: 40px;
+	padding-left: 10px;
+	width: 95%;
+}
+
+input:hover {
+	border: 1px solid rgb(123, 216, 123);
+}
+
+input:focus {
+	border: 1px solid rgb(123, 216, 123);
+	overflow: visible;
+}
+
+input:focus::-webkit-input-placeholder {
+	transition: 0.3s ease;
+	opacity: 0;
+}
+
+.title-before {
+	font-size: 16px;
+	font-style: italic;
+}
+
+.title-after {
+	font-weight: bold;
+	font-size: 24px;
+}
+
+button.send {
+	color: #fff;
+	line-height: 40px;
+	font-size: 16px;
+	font-weight: bold;
+	border: 0;
+	background-color: rgb(88, 211, 88);
+	width: 100%;
+	box-shadow: 0 0 10px rgb(123, 216, 123);
+	cursor: pointer;
+}
+
+button.send:active {
+	box-shadow: none;
+}
+
+.form-title {
+	line-height: 25px;
+	margin-bottom: 20px;
+}
+
+footer {
+	background: rgb(110, 98, 92);
+	color: white;
+}
+
+.footer-content {
+	padding-top: 40px;
+}
+
+.payment {
+	display: flex;
+}
+
+.paymentText {
+	margin-bottom: 10px;
+}
+
+.payment-card-images {
+	display:flex;
+	justify-content: space-between;
+}
+
+.SocialNetwork {
+	margin-right: 100px;
+}
+
+.SocialNetworkText {
+	margin-bottom: 10px;
+}
+
+.social-content {
+	display: inline-block;
+	
+}
+
+.social-size {
+	display: inline-block;
+	height: 40px;
+	width: 42px;
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+.social-fasebook {
+	background-image:url("../images/mas-social-icons.png");
+}
+
+.social-vk {
+	background-image:url("../images/mas-social-icons.png");
+	background-position: -46px 0px;
+}
+
+.social-class {
+	background-image: url("../images/mas-social-icons.png");
+	background-position: -95px 0px;
+}
+
+.social-youtube {
+	background-image: url("../images/mas-social-icons.png");
+	background-position: -143px 0px;
+}
+
+.social-instagram {
+	background-image: url("../images/mas-social-icons.png");
+	background-position: -190px 0px;
+}
+
+.data-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.Phone-content {
+	display: flex;
+	align-items: center;
+}
+
+.NumberPhone {
+	margin-left: 60px;
+	font-size: 28px;
+}
+
+.address {
+	color: rgb(230, 183, 55);
+}
+
+.OurAdvantages-content {
+	border-top: 1px solid gray;
+	background-color: white;
+}
+
+.OurAdvantages-text {
+	font-size: 30px;
+	text-align: center;
+	color: #ff4a3d;
+	font-family: impact;
+}
+
+.OurAdvantages-items {
+	padding-top: 20px;
+	padding-bottom: 60px;
+	color: rgb(15, 9, 9);
+}
+
+.OurAdvantages-item {
+	padding: 0 29px;
+	font-size: 18px;
+	padding-top: 15px;
+}
+
+.second-footer {
+	padding: 20px 0;
+}
+
+.second-footer a {
+	font-size: 18px;
+	color: #fdf399;
+}
+
+.second-footer a:hover {
+	color: rgb(230, 227, 73);
+}
+
+li {
+	list-style-type:none;
+	margin-bottom: 15px;
+}
+
+.table-content {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.Auto-text {
+	font-size: 21px;
+}
+
+.AutoToCountries-text {
+	font-size: 21px;
+}
+
+.SpecialOffers-content {
+	padding-left: 35px;
+	margin-top: 120px;
+}
+
+.SpecialOffers {
+	display: flex;
+	padding: 35px 0;
+	margin: 0 1px;
+	border-right: 1px solid rgba(128, 128, 128, 0.301);
+}
+
+.SpecialOffers-items {
+	padding-right: 20px;
+	width: 33%;
+	border-bottom: 1px solid rgba(128, 128, 128, 0.301);
+}
+
+.SpecialOffers-parametrs {
+	width: 18%;
+	border-right: 1px solid rgba(128, 128, 128, 0.301);
+	border-bottom: 1px solid rgba(128, 128, 128, 0.301);
+	padding: 10px;
+}
+
+.SO-name {
+	padding-bottom: 15px;
+	font-size: 24px;
+	text-align: center;
+}
+
+.SO-parametrs {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid rgba(128, 128, 128, 0.301);
+	font-size: 18px;
+	height: 40px;
+}
+
+.SO-parametrs:last-child {
+	border-bottom: none;
+}
+
+.SO-pay-items {
+	display: flex;
+	align-items: center;
+}
+
+.SpecialOffers-pay-content {
+	padding: 20px;
+	border-bottom: 1px solid rgba(128, 128, 128, 0.301);
+}
+
+.SO-item1 {
+	font-size: 28px;
+	padding: 0 40px;
+}
+
+.SO-item2 {
+	font-size: 24px;
+	color: gray;
+	text-decoration: line-through;
+	padding-right: 40px;
+}
+
+.sale {
+	padding-left: 3px;
+}
+
+.pay1 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	line-height: 40px;
+	font-size: 16px;
+	font-weight: bold;
+	border: 0;
+	background-color: rgb(88, 211, 88);
+	width: 49%;
+	box-shadow: 0 0 5px rgb(123, 216, 123);
+	cursor: pointer;
+}
+
+.pay1:active {
+	box-shadow: none;
+}
+
+.pay2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	line-height: 40px;
+	font-size: 16px;
+	font-weight: bold;
+	border: 0;
+	background-color: rgb(211, 69, 69);
+	width: 49%;
+	box-shadow: 0 0 5px rgb(211, 69, 69);
+	cursor: pointer;
+}
+
+.pay2:active {
+	box-shadow: none;
+}
+
+.pay3 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	line-height: 40px;
+	font-size: 16px;
+	font-weight: bold;
+	border: 0;
+	background-color: rgb(100, 96, 96);
+	width: 49%;
+	box-shadow: 0 0 5px rgb(100, 96, 96);
+	cursor: pointer;
+}
+
+.pay3:active {
+	box-shadow: none;
+}
+
+button img {
+	padding-right: 5px;
+}
+
+.button-pay1 {
+	display: flex;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.button-pay2 {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 25px;
+}
+
+.pay-text {
+	padding-left: 50px;
+	font-size: 20px;
+}
+
+.installment-content {
+	display: flex;
+	justify-content: space-evenly;
+	margin-bottom: 20px;
+}
+
+.installment {
+	display: flex;
+	align-items: center;
+}
+
+.installment-text {
+	font-size: 18px;
+	padding-left: 5px;
+}
+
+#ScrollUp {
+	position: fixed;
+	height: 50px;
+	width: 50px;
+	background-image: url("../images/ScrollUp.png");
+	background-repeat: no-repeat;
+	z-index: 100;
+}
+
+.aplication-text1 {
+	font-size: 22px;
+	padding-bottom: 10px;
+}
+
+.aplication-text2 {
+	font-size: 16px;
+	padding-bottom: 10px;
+}
+
+.application-inpit {
+	width: 26%;
+	padding: 20px;
+	border: 1px solid #fe523894;
+}
+
+.application-content {
+	margin-top: 120px;
+}
+
+.ButtonSand {
+	background-color: #fe5438;
+	color: white;
+	width: 100%;
+	line-height: 40px;
+	font-size: 16px;
+	font-weight: bold;
+	border: 0;
+	box-shadow: 0 0 10px #fe5438;
+	cursor: pointer;
+}
+
+.ButtonSand:active {
+	box-shadow: none;
+}
+
+.applicationForAuto {
+	display: flex;
+}
+
+.applicationForAuto:first-child {
+	padding:40px;
+}
+
+.application-inpit input:hover {
+	border: 1px solid black;
+}
+
+.application-inpit input:focus {
+	border: 1px solid black;
+}
+
+.Advantages-content {
+	padding: 0 40px;
+	width: 100%;
+}
+
+.Advantages-text {
+	font-size: 22px;
+	border-bottom: 1px dashed #d3d3d3;
+	color: #505050;
+}
+
+.AB {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+.AB:last-child {
+	padding: 0;
+	margin: 0;
+}
+
+.Advantages-box {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	border-radius: 2%;
+	width: 19%;
+	height: 80px;
+	justify-content:space-evenly;
+	align-items: center;
+	margin-top: 8px;
+	background-color: #efefef;
+}
+
+.Bank-Partners-content {
+	margin-top: 15px;
+}
+
+.Bank-Partners-text {
+	font-size: 18px;
+	color: #505050;
+	border-bottom: 1px dashed #d3d3d3;
+}
+
+.Bank-Partners-items {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.Bank-Partners-items img {
+	width: 17%;
+	margin-top: 2%;
+}
+
+.OurServices {
+	padding-left: 20px;
+	margin-top: 120px;
+}
+
+.Services-header {
+	font-size: 32px;
+	padding: 40px 0;
+}
+
+.Services-text {
+	font-size: 16px;
+	padding-bottom: 40px;
+}
+
+.services-images {
+	padding-bottom: 90px;
+}
+
+.services-images img {
+	border-radius: 5%;
+}
+
+.services-images .images-item1::after {
+	content:"";
+	position: absolute;
+	background-image: url("../images/service-motor.svg");
+	background-repeat: no-repeat;
+	width: 120px;
+	height: 120px;
+	margin-left: 490px;
+	margin-top:55px;
+}
+
+.services-images1 .images-item1::after {
+	content:"";
+	position: absolute;
+	background-image: url("../images/guarantee-auto.svg");
+	background-repeat: no-repeat;
+	width: 120px;
+	height: 120px;
+	margin-left: 490px;
+	margin-top:55px;
+}
+
+.services-images .images-item2::after {
+	content:"";
+	position: absolute;
+	background-image: url("../images/repair-instruments.svg");
+	background-repeat: no-repeat;
+	width: 120px;
+	height: 120px;
+	margin-left: 550px;
+	margin-top:55px;
+}
+
+.images-item1 {
+	display: flex;
+}
+
+.images-item1 img {
+	border-radius: 5%;
+	margin-bottom: 90px;
+}
+
+.item-title1 {
+	font-size: 24px;
+}
+
+.item-title2 {
+	font-size: 24px;
+	margin-left: 40px;
+}
+
+.List-Service2 ul li {
+	color: #696969;
+}
+
+.List-Service1 ul {
+	color: #696969;
+}
+
+.List-Service1 li::before {
+	content:"✔";
+	position: absolute;
+	margin-left: -15px;
+	margin-top: -2px;
+	color: #DC4343;
+}
+
+.List-Service1 {
+	margin-left: 180px;
+	margin-top: 50px;
+}
+
+.List-Service1 .ButtonSand {
+	width: 65%;
+	margin-left: 60px;
+}
+
+.List-Service2 .ButtonSand {
+	width: 65%;
+	margin-left: 50px;
+}
+
+.images-item2 {
+	display: flex;
+}
+
+.List-Service2 {
+	margin-left: 150px;
+	margin-top: 50px;
+}
+
+.List-Service2 li::before {
+	content:"✔";
+	position: absolute;
+	background-image: url("../images/service-motor.svg");
+	background-repeat: no-repeat;
+	margin-left: -15px;
+	margin-top: -2px;
+	color: #DC4343;
+}
+
+.images-item2 img {
+	margin-left: 200px;
+}
+
+.How-diraction-header{
+	font-size: 24px;
+	margin-left: 2%;
+	margin-bottom: 30px;
+}
+
+.How-diraction-text {
+	font-size: 21px;
+	margin-left: 2%;
+	margin-bottom: 30px;
+}
+
+center {
+	padding-bottom: 60px;
+}
+
+.ViewAuto {
+	margin-top: 120px;
+}
+
+.ViewAuto-header {
+	font-size: 3em;
+	margin: 0;
+	width: 45%;
+	text-align: center;
+	margin-bottom: 25px;
+}
+
+.ViewAuto-content {
+	display: flex;
+	padding: 0 2%;
+}
+
+.SpecialOffers-pay-content-price {
+	padding: 50px;
+	width: 100%;
+}
+
+.description-text {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 26px;
+	margin-top: 25px;
+	height: 50px;
+	background-color: rgb(40, 97, 218);
+	color: honeydew;
+	width: 100%;
+}
+
+.description-text::after {
+	content: "";
+	clear: both;
+	position: absolute;
+	width: 266px;
+	height: 5px;
+	margin-top: 44px;
+	background-color: rgb(255, 95, 95);
+}
+
+.description-label {
+	color: #6b6b6b;
+	font-size: 18px;
+	padding-bottom: 40px;
+	padding-left: 20px;
+}
